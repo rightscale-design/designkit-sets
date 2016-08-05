@@ -1,4 +1,4 @@
-# Designkit *
+# Designkit Sets
 
 ## Install
 
