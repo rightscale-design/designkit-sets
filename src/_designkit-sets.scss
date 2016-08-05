@@ -1,19 +1,35 @@
-.label-set {
-  position: relative;
-  padding: 5px 30px 6px 8px;
+@charset "UTF-8";
+
+.set {
+  display: inline-block;
+  margin-right: 6px;
   font-family: $helvetica;
   font-size: 12px;
   color: #fff;
-  background: #8495a4;
+  text-decoration: none;
+  background: $text;
   border-radius: 2px;
-  .label-set-count {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: auto;
-    height: 100%;
-    padding: 5px 8px 6px 8px;
-    background-color: rgba(black, .16);
+  outline: none;
+  .set-label,
+  .set-count {
+    padding: unpack(3px 8px);
+  }
+  .set-label {
+    float: left;
+    border-radius: 2px 0 0 2px;
+  }
+  .set-count {
+    float: right;
+    background-color: rgba(black, .25);
+    border-radius: 0 2px 2px 0;
+  }
+
+  &:hover {
+    background-color: $blue;
+  }
+
+  &.is-selected,
+  &.is-selected:hover {
+    background-color: $green;
   }
 }
