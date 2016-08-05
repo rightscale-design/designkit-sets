@@ -1,7 +1,7 @@
 {
   "name": "designkit-sets",
   "version": "0.0.1",
-  "description": "Sass module for css *.",
+  "description": "Sass module for css set labels.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rightscale-design/designkit-sets.git"
