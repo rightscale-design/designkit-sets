@@ -52,7 +52,7 @@ npm i designkit-sets
   background-color: #0A83F6;
 }
 
-.set.is-selected, .set.is-selected:hover {
+.set.active, .set.active:hover {
   background-color: #80C11A;
 }
 ```

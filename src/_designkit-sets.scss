@@ -28,8 +28,8 @@
     background-color: $blue;
   }
 
-  &.is-selected,
-  &.is-selected:hover {
+  &.active,
+  &.active:hover {
     background-color: $green;
   }
 }

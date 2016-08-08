@@ -1,6 +1,6 @@
 {
   "name": "designkit-sets",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Sass module for css set labels.",
   "repository": {
     "type": "git",
