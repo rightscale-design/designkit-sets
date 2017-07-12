@@ -1,7 +1,7 @@
 {
   "name": "designkit-sets",
-  "version": "0.0.2",
-  "description": "Sass module for css set labels.",
+  "version": "1.0.0",
+  "description": "Sass module for css *.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rightscale-design/designkit-sets.git"
@@ -24,16 +24,24 @@
   "license": "MIT",
   "homepage": "https://github.com/rightscale-design/designkit-sets#readme",
   "devDependencies": {
+    "autoprefixer": "^6.4.0",
     "bourbon": "^4.2.7",
-    "designkit-colors": "0.0.8",
+    "clean-css": "^3.4.19",
+    "designkit-colors": "^1.0.0",
     "http-server": "^0.9.0",
     "node-sass": "^3.8.0",
-    "nodemon": "^1.10.0"
+    "nodemon": "^1.10.0",
+    "npm-run-all": "^2.3.0",
+    "postcss-cli": "^2.5.2"
   },
   "scripts": {
-    "build-css": "./bin/build-css",
-    "build-min": "./bin/build-min",
-    "watch-css": "./bin/watch-css",
-    "serve": "./bin/http-server"
+    "start": "npm run build:serve",
+    "serve": "http-server docs -p 9000",
+    "watch": "nodemon -e scss -x 'npm run build:all'",
+    "build:scss": "./bin/scss",
+    "build:prefix": "postcss -u autoprefixer -b 'last 2 versions' < src/css/_designkit-sets.css > dist/designkit-sets.css",
+    "build:minify": "cleancss -o dist/designkit-sets.min.css dist/designkit-sets.css",
+    "build:all": "npm run build:scss && npm run build:prefix && npm run build:minify",
+    "build:serve": "run-p watch serve"
   }
 }

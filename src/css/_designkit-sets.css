@@ -1,20 +1,3 @@
-# Designkit Sets
-
-## Install
-
-```bash
-npm i designkit-sets
-```
-
-## Usage
-
-```html
-<a href="#" class="set"><span class="set-label">Pens</span><span class="set-count">9</span></a>
-```
-
-## The CSS
-
-```css
 .set {
   display: inline-block;
   margin-right: 6px;
@@ -50,12 +33,3 @@ npm i designkit-sets
 .set.active, .set.active:hover {
   background-color: #80C11A;
 }
-```
-
-## Author
-
-Jason Melgoza
-
-## License
-
-MIT
